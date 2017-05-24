@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.jasperhale.onetapdoze">
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission
+        android:name="android.permission.DUMP"
+        tools:ignore="ProtectedPermissions" />
+
+    <application
+        android:name=".BaseClass.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".View.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".Service.DozeService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".Service.BroadcastService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".View.SettingActivity" />
+
+        <receiver android:name=".View.IdleAppWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="WeightOnClickTag" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/idle_app_widget_info" />
+        </receiver>
+        <receiver
+            android:name=".Broadcast.IdleModeReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.jasperhale.onetapdoze.idlereceiver" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".Service.QuickSettings"
+            android:enabled="true"
+            android:exported="true"
+            android:icon="@drawable/notification"
+            android:label="Doze"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".Service.TimeService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name=".Broadcast.AlarmReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name=".Broadcast.BootReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".Other.HelpActivity" />
+        <activity android:name=".Other.AboutActivity" />
+        <activity android:name=".View.AdbActivity"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/whilt"
+            android:icon="@drawable/ic_white"
+            android:title="白名单"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/setting"
+            android:icon="@drawable/ic_settings"
+            android:title="设置"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/adb"
+            android:icon="@drawable/ic_adb"
+            android:title="ADB"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/help"
+            android:icon="@drawable/ic_help"
+            android:title="帮助"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/about"
+            android:icon="@drawable/ic_about"
+            android:title="关于"
+            app:showAsAction="never" />
+    </group>
+</menu>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jasperhale.onetapdoze.Other.HelpActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/help_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/help_toolbar"
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:text="常见问题及解决"
+            android:textSize="20dp" />
+
+        <TextView
+            android:paddingTop="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="无法进入Doze/进入Doze后异常"
+            android:textSize="17dp" />
+        <TextView
+            android:paddingTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="使用前，确认系统时候完整支持Doze模式！/n MIUI等第三方深度定制系统，厂商可能修改了与Doze有关的代码"
+            android:textSize="15dp" />
+        <TextView
+            android:paddingTop="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADB命令开启Doze支持"
+            android:textSize="17dp" />
+
+        <TextView
+            android:paddingTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="进入ADB命令，首先执行 关闭doze模式 再执行 开启Doze模式 最终结果为 Idle mode enabled 时Doze模式支持开启成功"
+            android:textSize="15dp" />
+        <TextView
+            android:paddingTop="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="完整Doze验证："
+            android:textSize="15dp" />
+        <TextView
+            android:paddingTop="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1：绿色守护嗜睡模式正常。 \n2：打盹模式支持情况:Check Doze第一项/第三项正常。"
+            android:textSize="15dp" />
+        <TextView
+            android:paddingTop="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Doze异常解决："
+            android:textSize="15dp" />
+        <TextView
+            android:paddingTop="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1：异常应用加入白名单 \n2：重启大法好，屡试不爽。"
+            android:textSize="15dp" />
+
+        <TextView
+            android:paddingTop="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="状态栏时间和小部件不更新 "
+            android:textSize="17dp" />
+        <TextView
+            android:paddingTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="属于Doze模式的特性，并非应用Bug"
+            android:textSize="15dp" />
+        <TextView
+            android:paddingTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="目前根据反馈有两种可能有效果的方案 \n （解决方法不一定有效！仅根据酷友反馈整理）\n1：开启状态栏时间显秒功能 \n2：将系统界面 和带有有 time 的服务加入Doze白名单 "
+            android:textSize="15dp" />
+
+
+        <TextView
+            android:paddingTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="目前磁贴/小部件遇到Bug请邮件！"
+            android:textSize="15dp" />
+
+    </LinearLayout>
+</LinearLayout>

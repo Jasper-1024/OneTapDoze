@@ -1,0 +1,49 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+apt {
+    arguments {
+        eventBusIndex "com.jasperhale.onetapdoze.MyEventBusIndex"
+    }
+}
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.jasperhale.onetapdoze"
+        minSdkVersion 23
+        targetSdkVersion 25
+        versionCode 13
+        versionName "3.0.3"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+
+        release {
+            minifyEnabled false
+            //混淆配置，不保留符号表
+            //minifyEnabled true
+            //去除无用资源
+            //shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    compile files('libs/eventbus-3.0.0.jar')
+
+    compile 'com.fabiendevos:nanotasks:1.1.0'
+    compile 'eu.chainfire:libsuperuser:1.0.0.+'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.android.support:design:25.3.1'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    apt 'org.greenrobot:eventbus-annotation-processor:3.0.1'
+}

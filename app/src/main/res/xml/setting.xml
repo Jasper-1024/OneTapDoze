@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="通用">
+        <SwitchPreference
+            android:key="Notify"
+            android:title="Doze通知"
+            android:summary="Doze模式改变时通知栏提醒" />
+        <SwitchPreference
+            android:key="NotifyPriority"
+            android:title="高优先级通知"
+            android:summary="Doze通知置顶" />
+        <SwitchPreference
+            android:key="JustSceenOn"
+            android:title="仅亮屏模式"
+            android:summary="作用域仅限亮屏，关屏释放控制权限" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="测试功能">
+        <CheckBoxPreference
+            android:key="KeepIdle"
+            android:title="保持Doze"
+            android:summary="针对无故退出Doze模式，退出Doze模式后重新进入。屏幕开启时有效！" />
+        <CheckBoxPreference
+            android:key="InterruptIdle"
+            android:title="间断Doze"
+            android:summary="针对状态栏时间不更新，间歇性退出Doze，时间间隔9分钟。亮屏有效！" />
+
+    </PreferenceCategory>
+</PreferenceScreen>

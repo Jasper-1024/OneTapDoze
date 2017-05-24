@@ -1,0 +1,19 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#50000000"
+    android:alpha="1"
+    android:padding="@dimen/widget_margin">
+
+    <Button
+        android:id="@+id/WeightDozeMode"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="OFF"
+        android:background="#00000000"
+        android:textColor="#1cd400"
+        android:textSize="24sp"
+        android:gravity="center"
+        />
+
+</RelativeLayout>
